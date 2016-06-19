@@ -5,6 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//required for Identity and OWIN Security
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+
 /**
  * @author: Tom Tsiliopoulos
  * @date: June 2, 2016
@@ -16,8 +21,25 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
     public partial class Navbar : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            SetActivePage();
+        {   
+            if(!IsPostBack)
+            {
+                //check if a user is logged in
+                if(HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    //show the GameTracker Content area
+                    GameTrackerPlaceHolder.Visible = true;
+                    PublicPlaceHolder.Visible = false;
+                }
+                else
+                {
+                    //only show login and register
+                    GameTrackerPlaceHolder.Visible = false;
+                    PublicPlaceHolder.Visible = true;
+                }
+                SetActivePage();
+            }
+            
         }
 
         /**
