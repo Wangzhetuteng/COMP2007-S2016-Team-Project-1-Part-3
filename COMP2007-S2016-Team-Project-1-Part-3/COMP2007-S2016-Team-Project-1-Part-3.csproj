@@ -128,9 +128,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Courses.aspx" />
-    <Content Include="Departments.aspx" />
+    <Content Include="GameTracker\Courses.aspx" />
+    <Content Include="GameTracker\Departments.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="GameTracker\MainMenu.aspx" />
     <Content Include="Models\ContosoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ContosoModel.edmx</DependentUpon>
@@ -151,6 +154,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
@@ -178,8 +182,8 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="StudentDetails.aspx" />
-    <Content Include="Students.aspx" />
+    <Content Include="GameTracker\StudentDetails.aspx" />
+    <Content Include="GameTracker\Students.aspx" />
     <Content Include="User_Controls\Jumbotron.ascx" />
     <Content Include="User_Controls\Navbar.ascx" />
     <Content Include="Scripts\app.js" />
@@ -199,11 +203,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Courses.aspx.cs">
+    <Compile Include="GameTracker\Courses.aspx.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Courses.aspx.designer.cs">
+    <Compile Include="GameTracker\Courses.aspx.designer.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -213,12 +217,33 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Departments.aspx.cs">
+    <Compile Include="GameTracker\Departments.aspx.cs">
       <DependentUpon>Departments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Departments.aspx.designer.cs">
+    <Compile Include="GameTracker\Departments.aspx.designer.cs">
       <DependentUpon>Departments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameTracker\MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameTracker\MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\ContosoModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -247,18 +272,26 @@
     <Compile Include="Models\Student.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="StudentDetails.aspx.cs">
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="GameTracker\StudentDetails.aspx.cs">
       <DependentUpon>StudentDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StudentDetails.aspx.designer.cs">
+    <Compile Include="GameTracker\StudentDetails.aspx.designer.cs">
       <DependentUpon>StudentDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Students.aspx.cs">
+    <Compile Include="GameTracker\Students.aspx.cs">
       <DependentUpon>Students.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Students.aspx.designer.cs">
+    <Compile Include="GameTracker\Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
     <Compile Include="User_Controls\Jumbotron.ascx.cs">

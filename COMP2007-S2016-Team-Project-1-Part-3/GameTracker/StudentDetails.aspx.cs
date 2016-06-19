@@ -47,7 +47,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             // Redirect back to Students page
-            Response.Redirect("~/Students.aspx");
+            Response.Redirect("~/GameTracker/Students.aspx");
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)

@@ -47,6 +47,16 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;
+                case "Contoso Menu":
+                    menu.Attributes.Add("class", "active");
+                    break;
+                case "Login":
+                    login.Attributes.Add("class", "active");
+                    break;
+                case "Register":
+                    register.Attributes.Add("class", "active");
+                    break;
+
             }
         }
     }
