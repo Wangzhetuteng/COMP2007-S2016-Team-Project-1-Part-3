@@ -7,20 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
-{
-
-
-    public partial class Users
-    {
-
+namespace COMP2007_S2016_Team_Project_1_Part_3 {
+    
+    
+    public partial class Teams {
+        
         /// <summary>
-        /// UsersGridView control.
+        /// PageSizeDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView UsersGridView;
+        protected global::System.Web.UI.WebControls.DropDownList PageSizeDropDownList;
+        
+        /// <summary>
+        /// TeamsGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView TeamsGridView;
     }
 }

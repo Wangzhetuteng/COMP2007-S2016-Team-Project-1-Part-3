@@ -39,7 +39,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                 authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
                 //Redirect to the Main Memu
-                Response.Redirect("~/GameTracker/MainMenu.aspx");
+                Response.Redirect("~/Game/MainMenu.aspx");
             }
             else
             {

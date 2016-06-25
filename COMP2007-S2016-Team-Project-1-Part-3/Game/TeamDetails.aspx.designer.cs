@@ -7,64 +7,46 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_S2016_Team_Project_1_Part_3.Admin {
+namespace COMP2007_S2016_Team_Project_1_Part_3 {
     
     
-    public partial class UserDetails {
+    public partial class TeamDetails {
         
         /// <summary>
-        /// AlertFlash control.
+        /// TeamNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertFlash;
+        protected global::System.Web.UI.WebControls.TextBox TeamNameTextBox;
         
         /// <summary>
-        /// StatusLabel control.
+        /// TeamDescriptionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StatusLabel;
+        protected global::System.Web.UI.WebControls.TextBox TeamDescriptionTextBox;
         
         /// <summary>
-        /// UserNameTextBox control.
+        /// PointsScoredTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox PointsScoredTextBox;
         
         /// <summary>
-        /// PasswordPlaceHolder control.
+        /// PointsLostTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PasswordPlaceHolder;
-        
-        /// <summary>
-        /// PasswordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
-        
-        /// <summary>
-        /// ConfirmPasswordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordTextBox;
+        protected global::System.Web.UI.WebControls.TextBox PointsLostTextBox;
         
         /// <summary>
         /// CancelButton control.

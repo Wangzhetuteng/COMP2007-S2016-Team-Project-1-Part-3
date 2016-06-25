@@ -67,13 +67,13 @@ namespace COMP2007_S2016_Team_Project_1_Part_3 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl users;
         
         /// <summary>
-        /// GameTrackerPlaceHolder control.
+        /// GamePlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder GameTrackerPlaceHolder;
+        protected global::System.Web.UI.WebControls.PlaceHolder GamePlaceHolder;
         
         /// <summary>
         /// menu control.
@@ -85,31 +85,22 @@ namespace COMP2007_S2016_Team_Project_1_Part_3 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl menu;
         
         /// <summary>
-        /// students control.
+        /// games control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl students;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl games;
         
         /// <summary>
-        /// courses control.
+        /// teams control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl courses;
-        
-        /// <summary>
-        /// departments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl departments;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl teams;
         
         /// <summary>
         /// logout control.

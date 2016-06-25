@@ -19,9 +19,7 @@
 
                         <asp:BoundField DataField="UserName" HeaderText="User Name" Visible="true" />
 
-                        <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" Visible="true" />
-
-                        <asp:BoundField DataField="Email" HeaderText="Email" Visible="true" />
+                       
 
                         <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/Admin/UserDetails.aspx" 
 

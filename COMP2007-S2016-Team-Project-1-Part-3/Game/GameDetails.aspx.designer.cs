@@ -7,49 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP2007_S2016_Team_Project_1_Part_3
-{
-
-
-    public partial class StudentDetails
-    {
-
+namespace COMP2007_S2016_Team_Project_1_Part_3 {
+    
+    
+    public partial class GameDetails {
+        
         /// <summary>
-        /// LastNameTextBox control.
+        /// GameNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LastNameTextBox;
-
+        protected global::System.Web.UI.WebControls.TextBox GameNameTextBox;
+        
         /// <summary>
-        /// FirstNameTextBox control.
+        /// GameDescriptionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FirstNameTextBox;
-
+        protected global::System.Web.UI.WebControls.TextBox GameDescriptionTextBox;
+        
         /// <summary>
-        /// EnrollmentDateTextBox control.
+        /// TotalPointsTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EnrollmentDateTextBox;
-
+        protected global::System.Web.UI.WebControls.TextBox TotalPointsTextBox;
+        
         /// <summary>
-        /// RangeValidator1 control.
+        /// SpectatorsTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
-
+        protected global::System.Web.UI.WebControls.TextBox SpectatorsTextBox;
+        
+        /// <summary>
+        /// WinningTeamTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WinningTeamTextBox;
+        
         /// <summary>
         /// CancelButton control.
         /// </summary>
@@ -58,7 +65,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelButton;
-
+        
         /// <summary>
         /// SaveButton control.
         /// </summary>

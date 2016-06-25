@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="COMP2007_S2016_Team_Project_1_Part_3.Register" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="container">
+    <div class="container">
 
         <div class="row">
 
@@ -36,7 +36,6 @@
                             <asp:TextBox runat="server" CssClass="form-control" ID="UserNameTextBox" placeholder="Username" required="true" TabIndex="0"></asp:TextBox>
 
                         </div>
-
                         <div class="form-group">
 
                             <label class="control-label" for="PhoneNumberTextBox">Phone Number:</label>
@@ -52,7 +51,6 @@
                             <asp:TextBox runat="server" TextMode="Email" CssClass="form-control" ID="EmailTextBox" placeholder="Email" required="true" TabIndex="0"></asp:TextBox>
 
                         </div>
-
                         <div class="form-group">
 
                             <label class="control-label" for="PasswordTextBox">Password:</label>

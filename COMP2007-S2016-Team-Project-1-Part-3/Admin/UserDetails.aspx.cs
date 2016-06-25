@@ -5,11 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//required for EF DB Access
+// required for EF DB Access
 using COMP2007_S2016_Team_Project_1_Part_3.Models;
 using System.Web.ModelBinding;
 
-//required for Identity and OWIN Security
+// required for Identity and OWIN Security
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -20,9 +20,9 @@ namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
-                if(Request.QueryString.Count > 0)
+                if (Request.QueryString.Count > 0)
                 {
                     PasswordPlaceHolder.Visible = false;
                     this.GetUser();
@@ -30,10 +30,8 @@ namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
                 else
                 {
                     PasswordPlaceHolder.Visible = true;
-
                 }
             }
-            
         }
 
         protected void GetUser()
@@ -46,30 +44,17 @@ namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
                                           where user.Id == UserID
                                           select user).FirstOrDefault();
 
-                if(updatedUser != null)
+                if (updatedUser != null)
                 {
                     UserNameTextBox.Text = updatedUser.UserName;
-                    PhoneNumberTextBox.Text = updatedUser.PhoneNumber;
-                    EmailTextBox.Text = updatedUser.Email;
+                    
                 }
-            }
-        }
-
-        protected void GetUsers()
-        {
-            using (UserConnection db = new UserConnection())
-            {
-                var Users = (from users in AspNet.Users
-                             select users);
-
-                UsersGridView.DataSource = Users.ToList();
-                UsersGridView.DataBind();
             }
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)
         {
-            //redirect to Users page
+            // redirect to Users page
             Response.Redirect("~/Admin/Users.aspx");
         }
 
@@ -77,53 +62,51 @@ namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
         {
             string UserID = "";
 
-            //if updating user
-            if(Request.QueryString.Count > 0)
+            // if updating user
+            if (Request.QueryString.Count > 0)
             {
                 using (UserConnection db = new UserConnection())
                 {
                     AspNetUser newUser = new AspNetUser();
 
-                    UserID == Request.QueryString["Id"].ToString();
+                    UserID = Request.QueryString["Id"].ToString();
 
-                    newUser = (from user in db.AspNetUsers
+                    newUser = (from users in db.AspNetUsers
                                where users.Id == UserID
                                select users).FirstOrDefault();
 
                     newUser.UserName = UserNameTextBox.Text;
-                    newUser.PhoneNumber = PhoneNumberTextBox.Text;
-                    newUser.Email = EmailTextBox.Text;
+                    
 
                     db.SaveChanges();
 
-                    //redirect to the users list
+                    // redirect to the users list
                     Response.Redirect("~/Admin/Users.aspx");
+
                 }
             }
 
-            //if creating a new user
-            if(UserID == "")
+            // if creating a new user
+            if (UserID == "")
             {
-                //create new useStore and userManager objects
+                // create new userStore and userManager objects
                 var userStore = new UserStore<IdentityUser>();
                 var userManager = new UserManager<IdentityUser>(userStore);
 
-                //create a new use object
+                // create a new user object
                 var user = new IdentityUser()
                 {
                     UserName = UserNameTextBox.Text,
-                    PhoneNumber = PhoneNumberTextBox.Text,
-                    Email = EmailTextBox.Text
+                   
                 };
 
-                //create a new user in the db and store the result 
+                // create a new user in the db and store the result 
                 IdentityResult result = userManager.Create(user, PasswordTextBox.Text);
 
-                if(result.Succeeded)
+                if (result.Succeeded)
                 {
                     Response.Redirect("~/Admin/Users.aspx");
                 }
-
                 else
                 {
                     StatusLabel.Text = result.Errors.FirstOrDefault();

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Dicaprio\Documents\Visual Studio 2015\COMP2007\COMP2007-S2016-Team-Project-1-Part-3\COMP2007-S2016-Team-Project-1-Part-3\Models\ContosoModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Dicaprio\Documents\Visual Studio 2015\COMP2007\COMP2007-S2016-Team-Project-1-Part-3\COMP2007-S2016-Team-Project-1-Part-3\Models\UserMode.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

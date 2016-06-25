@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//required for Identity and OWIN Security
+// required for Identity and OWIN Security
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -21,32 +21,32 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
     public partial class Navbar : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
-        {   
-            if(!IsPostBack)
+        {
+            if (!IsPostBack)
             {
-                //check if a user is logged in
-                if(HttpContext.Current.User.Identity.IsAuthenticated)
+                // check if a user is logged in
+                if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
-                    HttpContext.Current.User.Identity.GetUserName();
-                    //show the GameTracker Content area
-                    GameTrackerPlaceHolder.Visible = true;
+
+                    // show the Contoso Content area
+                    GamePlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
 
-                    if(HttpContext.Current.User.Identity.GetUserName() == "admin")
+                    if (HttpContext.Current.User.Identity.GetUserName() == "admin")
                     {
                         UserPlaceHolder.Visible = true;
                     }
                 }
                 else
                 {
-                    //only show login and register
-                    GameTrackerPlaceHolder.Visible = false;
+                    // only show login and register
+                    GamePlaceHolder.Visible = false;
                     PublicPlaceHolder.Visible = true;
                     UserPlaceHolder.Visible = false;
                 }
                 SetActivePage();
             }
-            
+
         }
 
         /**
@@ -65,18 +65,15 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                     home.Attributes.Add("class", "active");
                     break;
                 case "Students":
-                    students.Attributes.Add("class", "active");
+                    games.Attributes.Add("class", "active");
                     break;
                 case "Courses":
-                    courses.Attributes.Add("class", "active");
-                    break;
-                case "Departments":
-                    departments.Attributes.Add("class", "active");
+                    teams.Attributes.Add("class", "active");
                     break;
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;
-                case "Contoso Menu":
+                case "Game Tracker Menu":
                     menu.Attributes.Add("class", "active");
                     break;
                 case "Login":

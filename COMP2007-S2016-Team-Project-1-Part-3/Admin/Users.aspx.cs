@@ -5,10 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//required for EF DB Access
+// required for EF DB Access
 using COMP2007_S2016_Team_Project_1_Part_3.Models;
 using System.Web.ModelBinding;
-
 
 namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
 {
@@ -16,14 +15,30 @@ namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                this.GetUsers();
+            }
+        }
 
+
+        protected void GetUsers()
+        {
+            using (UserConnection db = new UserConnection())
+            {
+                var Users = (from users in db.AspNetUsers
+                             select users);
+
+                UsersGridView.DataSource = Users.ToList();
+                UsersGridView.DataBind();
+            }
         }
 
         protected void UsersGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            int SelectedRow = e.RowIndex;
+            int selectedRow = e.RowIndex;
 
-            string UserID = UsersGridView.DataKeys[SelectedRow].Values["Id"].ToString();
+            string UserID = UsersGridView.DataKeys[selectedRow].Values["Id"].ToString();
 
             using (UserConnection db = new UserConnection())
             {
@@ -31,12 +46,12 @@ namespace COMP2007_S2016_Team_Project_1_Part_3.Admin
                                           where users.Id == UserID
                                           select users).FirstOrDefault();
 
-                db.AspNetUser.Remove(deletedUser);
+                db.AspNetUsers.Remove(deletedUser);
                 db.SaveChanges();
-
-                //refresh the Grid
-                this.GetUsers();
             }
+
+            // refresh the grid
+            this.GetUsers();
         }
     }
 }
