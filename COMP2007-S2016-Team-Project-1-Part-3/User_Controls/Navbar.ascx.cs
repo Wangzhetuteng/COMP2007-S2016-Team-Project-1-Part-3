@@ -11,9 +11,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
 /**
- * @author: Tom Tsiliopoulos
- * @date: June 2, 2016
- * @version: 0.0.2 - updated SetActivePage Method to include new links
+ * @author: Yandong Wang 200277628, Zhen Zhang 200257444
+ * @date: June 24, 2016
+ * @version: 0.0.3 - updated SetActivePage Method to include new links
  */
 
 namespace COMP2007_S2016_Team_Project_1_Part_3

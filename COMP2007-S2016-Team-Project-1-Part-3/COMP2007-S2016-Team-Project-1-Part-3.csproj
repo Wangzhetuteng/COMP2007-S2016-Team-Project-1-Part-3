@@ -384,6 +384,7 @@
     <Compile Include="User_Controls\Jumbotron.ascx.designer.cs">
       <DependentUpon>Jumbotron.ascx</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\LinkedResource.cs" />
     <Compile Include="User_Controls\Navbar.ascx.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,6 +405,7 @@
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
+    <Folder Include="Assets\Iamges\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

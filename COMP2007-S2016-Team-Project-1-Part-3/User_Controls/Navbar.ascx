@@ -13,7 +13,9 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <img class="displayed" src="~/Assets/Images/Logo.jpg" width="50" height="50"/>
             <ul class="nav navbar-nav navbar-right">
+                
                 <li id="home" runat="server"><a href="/Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
 
                 <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
