@@ -70,9 +70,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                 case "Courses":
                     teams.Attributes.Add("class", "active");
                     break;
-                case "Contact":
-                    contact.Attributes.Add("class", "active");
-                    break;
+                
                 case "Game Tracker Menu":
                     menu.Attributes.Add("class", "active");
                     break;

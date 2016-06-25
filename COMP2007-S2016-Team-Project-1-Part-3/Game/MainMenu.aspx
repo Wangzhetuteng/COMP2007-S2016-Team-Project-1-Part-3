@@ -11,7 +11,7 @@
 
                 <div class="well">
 
-                    <h3><i class="fa fa-leanpub fa-lg"></i> Games</h3>
+                    <h3><i class="fa fa-trophy fa-lg"></i> Games</h3>
 
                     <div class="list-group">
 
@@ -25,7 +25,7 @@
 
                 <div class="well">
 
-                    <h3><i class="fa fa-book fa-lg"></i> Teams</h3>
+                    <h3><i class="fa fa-futbol-o fa-lg"></i> Teams</h3>
 
                     <div class="list-group">
 

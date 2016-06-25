@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <h1>Game Details</h1>
+                <h1>Team Details</h1>
                 <h5>All Fields are Required</h5>
                 <br />
                 <div class="form-group">

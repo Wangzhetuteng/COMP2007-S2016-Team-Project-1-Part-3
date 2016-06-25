@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/Default.aspx"><i class="fa fa-graduation-cap  fa-lg"></i> Game Tracker</a>
+            <a class="navbar-brand" href="/Default.aspx"><i class="fa fa-table  fa-lg"></i> Game Tracker</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -27,13 +27,13 @@
 
                 <asp:PlaceHolder ID="GamePlaceHolder" runat="server">
                     <li id="menu" runat="server"><a href="/Game/MainMenu.aspx"><i class="fa fa-map-signs fa-lg"></i> Main Menu</a></li>
-                    <li id="games" runat="server"><a href="/Game/Games.aspx"><i class="fa fa-leanpub fa-lg"></i> Games</a></li>
-                    <li id="teams" runat="server"><a href="/Game/Teams.aspx"><i class="fa fa-book fa-lg"></i> Teams</a></li>
+                    <li id="games" runat="server"><a href="/Game/Games.aspx"><i class="fa fa-trophy fa-lg"></i> Games</a></li>
+                    <li id="teams" runat="server"><a href="/Game/Teams.aspx"><i class="fa fa-futbol-o fa-lg"></i> Teams</a></li>
                    
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
                 </asp:PlaceHolder>
 
-                <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
+               
             </ul>
         </div>
         <!-- /.navbar-collapse -->
