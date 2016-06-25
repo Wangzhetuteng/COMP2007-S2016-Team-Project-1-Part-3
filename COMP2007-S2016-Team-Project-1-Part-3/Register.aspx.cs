@@ -10,6 +10,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+/**
+ * @author: Yandong Wang 200277628, Zhen Zhang 200257444
+ * @date: June 24, 2016
+ * @version: 0.0.3 - Allow user to register by adding their info
+ */
+
 namespace COMP2007_S2016_Team_Project_1_Part_3
 {
     public partial class Register : System.Web.UI.Page
@@ -24,7 +30,17 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
             // Redirect back to the Default page
             Response.Redirect("~/Default.aspx");
         }
-
+        /**
+         *  <summary>
+         * This event handler add a user's data for the db using EF
+         * </summary>
+         *
+         * @method RegisterButton_Click
+         * @param {object} sender 
+         * @param {EventArgs} e
+         * @retuens {void}
+         * 
+         */
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
             // create new userStore and userManager objects

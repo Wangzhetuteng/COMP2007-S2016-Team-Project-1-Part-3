@@ -11,7 +11,11 @@ using COMP2007_S2016_Team_Project_1_Part_3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
-
+/**
+ * @author: Yandong Wang 200277628, Zhen Zhang 200257444
+ * @date: June 24, 2016
+ * @version: 0.0.3 - Allow user to view the teams table
+ */
 
 namespace COMP2007_S2016_Team_Project_1_Part_3
 {

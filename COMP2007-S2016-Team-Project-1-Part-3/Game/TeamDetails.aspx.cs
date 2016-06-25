@@ -11,6 +11,12 @@ using COMP2007_S2016_Team_Project_1_Part_3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
+/**
+ * @author: Yandong Wang 200277628, Zhen Zhang 200257444
+ * @date: June 24, 2016
+ * @version: 0.0.3 - Allow user to add or edit team details
+ */
+
 namespace COMP2007_S2016_Team_Project_1_Part_3
 {
     public partial class TeamDetails : System.Web.UI.Page
@@ -26,7 +32,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
 
         /**
          *  <summary>
-         * This event handler deletes a games from the db
+         * This event handler deletes a team from the db
          * </summary>
          *
          * @method GetTeam
@@ -41,12 +47,12 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
             //connect to the EF DB
             using (GameConnection db = new GameConnection())
             {
-                //populate a game object instance with the GameID from the URL Parameter
+                //populate a team object instance with the TeamID from the URL Parameter
                 Team updatedTeam = (from team in db.Teams
                                     where team.TeamID == TeamID
                                     select team).FirstOrDefault();
 
-                //map the game properties to the form controls
+                //map the team properties to the form controls
                 if (updatedTeam != null)
                 {
                     TeamNameTextBox.Text = updatedTeam.TeamName;
@@ -58,12 +64,24 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
             }
         }
 
+
+        /**
+        *  <summary>
+        * This event handler saves a team for the db using EF
+        * </summary>
+        *
+        * @method SaveButton_Click
+        * @param {object} sender 
+        * @param {EventArgs} e
+        * @retuens {void}
+        * 
+        */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // Use EF to connect to the server
             using (GameConnection db = new GameConnection())
             {
-                // use the Game model to create a new game object and
+                // use the Game model to create a new team object and
                 // save a new record
                 Team newTeam = new Team();
 
@@ -74,20 +92,19 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                     //get the ID from URL
                     TeamID = Convert.ToInt32(Request.QueryString["TeamID"]);
 
-                    //get the current game from EF DB
+                    //get the current team from EF DB
                     newTeam = (from team in db.Teams
                                where team.TeamID == TeamID
                                select team).FirstOrDefault();
                 }
 
-                // add form data to the new game record
+                // add form data to the new team record
                 newTeam.TeamName = TeamNameTextBox.Text;
                 newTeam.TeamDescription = TeamDescriptionTextBox.Text;
                 newTeam.PointsScored = Convert.ToInt32(PointsScoredTextBox.Text);
                 newTeam.PointsLost = Convert.ToInt32(PointsLostTextBox.Text);
               
-                // use LINQ to ADO.NET to add / insert new game into the database
-
+                // use LINQ to ADO.NET to add / insert new team into the database
                 if (TeamID == 0)
                 {
                     db.Teams.Add(newTeam);
@@ -96,7 +113,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                 // save our changes - also update and inserts
                 db.SaveChanges();
 
-                // Redirect back to the updated games page
+                // Redirect back to the updated Teams page
                 Response.Redirect("~/Game/Teams.aspx");
 
 
@@ -104,7 +121,7 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
         }
         protected void CancelButton_Click(object sender, EventArgs e)
         {
-            // Redirect back to Games page
+            // Redirect back to Teams page
             Response.Redirect("~/Game/Teams.aspx");
 
         }

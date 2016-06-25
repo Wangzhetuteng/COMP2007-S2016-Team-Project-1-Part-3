@@ -10,6 +10,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+/**
+ * @author: Yandong Wang 200277628, Zhen Zhang 200257444
+ * @date: June 24, 2016
+ * @version: 0.0.3 - Allow user to login by using their own user name and password
+ */
+
 namespace COMP2007_S2016_Team_Project_1_Part_3
 {
     public partial class Login : System.Web.UI.Page

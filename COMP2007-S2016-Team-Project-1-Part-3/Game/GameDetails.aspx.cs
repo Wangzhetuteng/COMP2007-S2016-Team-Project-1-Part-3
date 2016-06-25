@@ -10,6 +10,12 @@ using COMP2007_S2016_Team_Project_1_Part_3.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
 
+/**
+ * @author: Yandong Wang 200277628, Zhen Zhang 200257444
+ * @date: June 24, 2016
+ * @version: 0.0.3 - Allow user to add or edit game details
+ */
+
 namespace COMP2007_S2016_Team_Project_1_Part_3
 {
     public partial class GameDetails : System.Web.UI.Page
@@ -18,19 +24,18 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
         {
             if ((!IsPostBack) && (Request.QueryString.Count > 0))
             {
-                this.GetGame();
+                this.GetGames();
             }
         }
         /**
-         *  <summary>
-         * This event handler deletes a games from the db
-         * </summary>
-         *
-         * @method GetGame
-         * @retuens {void}
-         * 
-         */
-        protected void GetGame()
+        * <summary>
+        * This method gets the game data from the DB
+        * </summary>
+        * 
+        * @method GetGame
+        * @returns {void}
+        */
+        protected void GetGames()
         {
             //populate the data form with existing data from the database
             int GameID = Convert.ToInt32(Request.QueryString["GameID"]);
@@ -54,7 +59,17 @@ namespace COMP2007_S2016_Team_Project_1_Part_3
                 }
             }
         }
-
+        /**
+         *  <summary>
+         * This event handler saves a game for the db using EF
+         * </summary>
+         *
+         * @method SaveButton_Click
+         * @param {object} sender 
+         * @param {EventArgs} e
+         * @retuens {void}
+         * 
+         */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // Use EF to connect to the server
